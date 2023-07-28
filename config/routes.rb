@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'clients#index'
+  root 'users#index'
 
-  get '/clients', to: 'clients#index'
+  get '/users', to: 'users#index'
 end
