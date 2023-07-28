@@ -1,1 +1,13 @@
-<h1 class="text-3xl">Gestão de Clientes</h1>
+<h1 class="text-3xl text-white">Gestão de Clientes</h1>
+
+<div class="flex">
+    <% @users.each do |user| %>
+        <div class="w-full my-10 bg-blue-900 p-7 rounded-xl text-white">
+            <%= user.name %> - <%= user.telephone %>
+        </div>
+    <% end %>
+</div>
+
+<div class="flex justify-center align-center">
+    <a class="text-white px-5 py-4 bg-blue-700 rounded-xl" href="/create">Adicionar Cliente</a>
+</div>
