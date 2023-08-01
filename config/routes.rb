@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root 'clients#index'
+  resources :users
 
-  get '/clients', to: 'clients#index'
+  root 'users#index'
+
+  get '/users', to: 'users#index'
+  get '/create', to: 'users#new'
+
+  post '/users/create', to: 'users#create'
+
+  delete '/users', to: 'users#destroy'
 end
