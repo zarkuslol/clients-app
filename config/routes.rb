@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/create', to: 'users#new'
 
   post '/users/create', to: 'users#create'
+
+  delete '/users', to: 'users#destroy'
 end
