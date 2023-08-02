@@ -3,18 +3,30 @@
         <div class="mb-5 flex flex-col">
             <%= form.label :nome, class: "text-white" %>
             <%= form.text_field :name, class: "border-0 bg-transparent border-b-2 border-solid border-blue-500 text-white focus:ring-0 focus:outline-none" %>
+            <% @user.errors.full_messages_for(:name).each do |message| %>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3"><%= message %></div>
+            <% end %>
         </div>
         <div class="mb-5 flex flex-col">
             <%= form.label :email, class: "text-white" %>
             <%= form.email_field :email, class: "border-0 bg-transparent border-b-2 border-solid border-blue-500 text-white focus:ring-0 focus:outline-none" %>
+            <% @user.errors.full_messages_for(:email).each do |message| %>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3"><%= message %></div>
+            <% end %>
         </div>
         <div class="mb-5 flex flex-col">
             <%= form.label :telefone, class: "text-white" %>
             <%= form.telephone_field :telephone, class: "border-0 bg-transparent border-b-2 border-solid border-blue-500 text-white focus:ring-0 focus:outline-none" %>
+            <% @user.errors.full_messages_for(:telephone).each do |message| %>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3"><%= message %></div>
+            <% end %>
         </div>
         <div class="mb-5 flex flex-col">
             <%= form.label :data_de_nascimento, class: "text-white" %>
-            <%= form.date_field :birth_date, class: "border-0 bg-transparent border-b-2 border-solid border-blue-500 text-white focus:ring-0 focus:outline-none" %>
+            <%= form.text_field :birth_date, class: "border-0 bg-transparent border-b-2 border-solid border-blue-500 text-white focus:ring-0 focus:outline-none" %>
+            <% @user.errors.full_messages_for(:birth_date).each do |message| %>
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3"><%= message %></div>
+            <% end %>
         </div>
         <div class="flex justify-center align-center">
             <%= form.submit "Adicionar Cliente", class: "bg-blue-500 text-white py-3 px-4 rounded-xl cursor-pointer"%>

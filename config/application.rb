@@ -18,5 +18,14 @@ module Client
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+    config.i18n.default_locale = :pt
+
+    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+
+    I18n.available_locales = [:en, :pt]
+
+    I18n.default_locale = :pt
   end
 end
