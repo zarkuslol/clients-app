@@ -1,0 +1,13 @@
+pt-br:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: não pode ser vazio
+            email:
+              blank: não pode ser vazio
+              invalid: é inválido
+            password:
+              too_short: é muito curto (mínimo de 6 caracteres)
